@@ -1,0 +1,53 @@
+---
+const services = [
+  {
+    title: 'Consulta General',
+    description: 'Exámenes rutinarios y diagnóstico preventivo para mantener la salud de tu mascota.',
+    icon: '🏥'
+  },
+  {
+    title: 'Cirugía',
+    description: 'Procedimientos quirúrgicos con equipo de última generación y máximo cuidado.',
+    icon: '⚕️'
+  },
+  {
+    title: 'Vacunación',
+    description: 'Programa completo de vacunación para prevenir enfermedades comunes.',
+    icon: '💉'
+  },
+  {
+    title: 'Emergencias 24/7',
+    description: 'Atención de emergencias veterinarias las 24 horas, todos los días.',
+    icon: '🚑'
+  },
+  {
+    title: 'Laboratorio',
+    description: 'Análisis clínicos y diagnósticos precisos con resultados rápidos.',
+    icon: '🔬'
+  },
+  {
+    title: 'Peluquería',
+    description: 'Servicios de grooming profesional para mantener a tu mascota limpia y saludable.',
+    icon: '✂️'
+  }
+];
+---
+
+<section id="servicios" class="py-20 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Nuestros Servicios</h2>
+      <p class="mt-4 text-gray-600">Ofrecemos una amplia gama de servicios veterinarios profesionales</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {services.map(service => (
+        <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+          <span class="text-4xl mb-4 block">{service.icon}</span>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">{service.title}</h3>
+          <p class="text-gray-600">{service.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

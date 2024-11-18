@@ -1,0 +1,32 @@
+---
+const menuItems = [
+  { text: 'Inicio', href: '#' },
+  { text: 'Nosotros', href: '#nosotros' },
+  { text: 'Servicios', href: '#servicios' },
+  { text: 'Equipo', href: '#equipo' },
+  { text: 'Testimonios', href: '#testimonios' },
+  { text: 'Contacto', href: '#contacto' },
+];
+---
+
+<header class="fixed w-full bg-white shadow-sm z-50">
+  <div class="container mx-auto px-4">
+    <nav class="flex items-center justify-between h-20">
+      <a href="/" class="text-2xl font-bold text-primary-600">
+        VetCare
+      </a>
+
+      <div class="hidden md:flex items-center gap-8">
+        {menuItems.map(item => (
+          <a href={item.href} class="text-gray-600 hover:text-primary-600 transition-colors">
+            {item.text}
+          </a>
+        ))}
+      </div>
+
+      <a href="#contacto" class="bg-primary-600 text-white px-6 py-2 rounded-full hover:bg-primary-700 transition-colors">
+        Reservar Cita
+      </a>
+    </nav>
+  </div>
+</header>
